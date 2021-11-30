@@ -138,7 +138,7 @@ hash.each_value do |gene|
     positiontosum = position[0]
     position[1] = (position[1].to_i) -1
     position = position[0]..position[1]
-    match = gene.seq[position].complement.gsub(pattern("CTTCTT")).map{Regexp.last_match.begin(0)}
+    match = gene.seq[position].gsub(pattern("AAGAAG")).map{Regexp.last_match.begin(0)}
     match.each do |match|
       match = match + positiontosum
       match_complpos.append(match)
